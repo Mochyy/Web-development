@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- molla/Order history.html  22 Nov 2019 09:55:05 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>POTAMATO-ORDER HISTORY</title>
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <div class="header-dropdown">
+                        <a href="#">Usd</a>
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">Eur</a></li>
+                                <li><a href="#">Usd</a></li>
+                            </ul>
+                        </div><!-- End .header-menu -->
+                    </div><!-- End .header-dropdown -->
+
+                    <div class="header-dropdown">
+                        <a href="#">Eng</a>
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">French</a></li>
+                                <li><a href="#">Spanish</a></li>
+                            </ul>
+                        </div><!-- End .header-menu -->
+                    </div><!-- End .header-dropdown -->
+                </div><!-- End .header-left -->
+
+                <div class="header-right">
+                    <ul class="top-menu">
+                        <li>
+                            <a href="#">Links</a>
+                            <ul>
+                                <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
+                                <li><a href="wishlist.html"><i class="icon-heart-o"></i>Wishlist <span>(3)</span></a>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- End .top-menu -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div><!-- End .header-top -->
+
+        <div class="header-middle sticky-header">
+            <div class="container">
+                <div class="header-left">
+                    <button class="mobile-menu-toggler">
+                        <span class="sr-only">Toggle mobile menu</span>
+                        <i class="icon-bars"></i>
+                    </button>
+
+                    <a href="index.html" class="logo">
+                        <img src="https://i.imgur.com/ItlCRTo.png" alt="Potamato Logo" width="200" height="25">
+                    </a>
+
+                    <div class="header-center">
+                        <nav class="main-nav">
+                            <ul class="menu sf-arrows">
+                                <li class="megamenu-container active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="category.html" class="sf-with-ul">Shop</a>
+
+                                    <div class="megamenu megamenu-md">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-8">
+                                                <div class="menu-col">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="menu-title">Shop with sidebar</div>
+                                                            <!-- End .menu-title -->
+                                                            <ul>
+                                                                <li><a href="category-list.html">Shop List</a></li>
+                                                                <li><a href="category-4cols.html">Shop Grid 4 Columns</a>
+                                                                </li>
+                                                            </ul>
+
+                                                            <div class="menu-title">Shop no sidebar</div>
+                                                            <!-- End .menu-title -->
+                                                            <ul>
+                                                                <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span
+                                                                        class="tip tip-hot">Hot</span></span></a></li>
+                                                            </ul>
+                                                        </div><!-- End .col-md-6 -->
+
+                                                        <div class="col-md-6">
+                                                            <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
+                                                            <ul>
+                                                                <li><a href="cart.html">Cart</a></li>
+                                                                <li><a href="checkout.html">Checkout</a></li>
+                                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                                <li><a href="dashboard.html">My Account</a></li>
+                                                            </ul>
+                                                        </div><!-- End .col-md-6 -->
+                                                    </div><!-- End .row -->
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-8 -->
+
+                                            <div class="col-md-4">
+                                                <div class="banner banner-overlay">
+                                                    <a href="category.html" class="banner banner-menu">
+                                                        <img src="https://i.imgur.com/rAlobtm.png" alt="Banner">
+                                                    </a>
+                                                </div><!-- End .banner banner-overlay -->
+                                            </div><!-- End .col-md-4 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-md -->
+                                </li>
+                                <li>
+                                    <a href="product.html" class="sf-with-ul">Product</a>
+
+                                    <div class="megamenu megamenu-sm">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-6">
+                                                <div class="menu-col">
+                                                    <div class="menu-title">Product details highlight</div>
+                                                    <!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="product.html">Handbag</a></li>
+                                                        <li><a href="product-centered.html">Backpack</a></li>
+                                                        <li>
+                                                            <a href="product-extended.html"><span>Totebag</span></a>
+                                                        </li>
+                                                        <li><a href="product-gallery.html">Crossbody</a></li>
+                                                        <li><a href="product-sticky.html">Hipbag</a></li>
+                                                        <li><a href="product-sidebar.html">Wallet</a></li>
+                                                        <li><a href="product-fullwidth.html">Pencilcase</a></li>
+                                                    </ul>
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-6 -->
+
+                                            <div class="col-md-6">
+                                                <div class="banner banner-overlay">
+                                                    <a href="category.html">
+                                                        <img src="https://i.imgur.com/Mz03KM6.jpg" alt="Banner"
+                                                             style="height: 300px">
+
+                                                        <div class="banner-content banner-content-bottom">
+                                                            <div class="banner-title text-white">New
+                                                                Trends<br><span><strong>winter 2020</strong></span></div>
+                                                            <!-- End .banner-title -->
+                                                        </div><!-- End .banner-content -->
+                                                    </a>
+                                                </div><!-- End .banner -->
+                                            </div><!-- End .col-md-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-sm -->
+                                </li>
+                                <li>
+                                    <a href="#" class="sf-with-ul">Pages</a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="about.html">About</a>
+
+                                            <ul>
+                                                <li><a href="about.html">About 01</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Contact</a>
+
+                                            <ul>
+                                                <li><a href="contact.html">Contact 01</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="blog.html" style="color: white">Blog</a>
+                                </li>
+                            </ul><!-- End .menu -->
+                        </nav><!-- End .main-nav -->
+                    </div>
+                </div><!-- End .header-left -->
+
+                <div class="header-right">
+                    <div class="header-search">
+                        <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
+                        <form action="#" method="get">
+                            <div class="header-search-wrapper">
+                                <label for="q" class="sr-only">Search</label>
+                                <input type="search" class="form-control" name="q" id="q" placeholder="Search in..."
+                                       required>
+                            </div><!-- End .header-search-wrapper -->
+                        </form>
+                    </div><!-- End .header-search -->
+                    <div class="dropdown compare-dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" data-display="static" title="Order history"
+                           aria-label="Compare Products">
+                           <i class="icon-random"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="compare-products">
+                                <li class="compare-product">
+                                    <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                    <h4 class="compare-product-title"><a href="order-history.html">Blue Night Backpack</a></h4>
+                                </li>
+                                <li class="compare-product">
+                                    <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                    <h4 class="compare-product-title"><a href="order-history.html">White pearl Handbag</a></h4>
+                                </li>
+                            </ul>
+
+                        </div><!-- End .dropdown-menu -->
+                    </div><!-- End .compare-dropdown -->
+
+                    <div class="dropdown cart-dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" data-display="static">
+                            <i class="icon-shopping-cart"></i>
+                            <span class="cart-count">2</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-cart-products">
+                                <div class="product">
+                                    <div class="product-cart-details">
+                                        <h4 class="product-title">
+                                            <a href="product.html">Beige knitted elastic hipbag</a>
+                                        </h4>
+
+                                        <span class="cart-product-info">
+                                                <span class="cart-product-qty">1</span>
+                                                x $84.00
+                                            </span>
+                                    </div><!-- End .product-cart-details -->
+
+                                    <figure class="product-image-container">
+                                        <a href="product.html" class="product-image">
+                                            <img src="https://i.imgur.com/fGggttK.png" alt="product">
+                                        </a>
+                                    </figure>
+                                    <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                </div><!-- End .product -->
+
+                                <div class="product">
+                                    <div class="product-cart-details">
+                                        <h4 class="product-title">
+                                            <a href="product.html">Blink utility cross</a>
+                                        </h4>
+
+                                        <span class="cart-product-info">
+                                                <span class="cart-product-qty">1</span>
+                                                x $76.00
+                                            </span>
+                                    </div><!-- End .product-cart-details -->
+
+                                    <figure class="product-image-container">
+                                        <a href="product.html" class="product-image">
+                                            <img src="https://i.imgur.com/WX1unPv.png" alt="product">
+                                        </a>
+                                    </figure>
+                                    <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                </div><!-- End .product -->
+                            </div><!-- End .cart-product -->
+
+                            <div class="dropdown-cart-total">
+                                <span>Total</span>
+
+                                <span class="cart-total-price">$160.00</span>
+                            </div><!-- End .dropdown-cart-total -->
+
+                            <div class="dropdown-cart-action">
+                                <a href="cart.html" class="btn btn-primary">View Cart</a>
+                                <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
+                                        class="icon-long-arrow-right"></i></a>
+                            </div><!-- End .dropdown-cart-total -->
+                        </div><!-- End .dropdown-menu -->
+                    </div><!-- End .cart-dropdown -->
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div><!-- End .header-middle -->
+    </header><!-- End .header -->
+
+    <main class="main">
+        <div class="page-header text-center" style="background-image: url('https://i.imgur.com/69I7DV8.jpg')">
+            <div class="container">
+                <h1 class="page-title" style="font-weight: bold">Order history<span>Shop</span></h1>
+            </div><!-- End .container -->
+        </div><!-- End .page-header -->
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Order history</li>
+                </ol>
+            </div><!-- End .container -->
+        </nav><!-- End .breadcrumb-nav -->
+
+        <div class="page-content">
+            <div class="container">
+                <table class="table table-wishlist table-mobile">
+                    <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="product-col">
+                            <div class="product">
+                                <figure class="product-media">
+                                    <a href="#">
+                                        <img src="https://i.imgur.com/3tbFefg.jpg" alt="Product image">
+                                    </a>
+                                </figure>
+
+                                <h3 class="product-title">
+                                    <a href="#">Blue Night Backpack</a>
+                                </h3><!-- End .product-title -->
+                            </div><!-- End .product -->
+                        </td>
+                        <td class="price-col">$50.00</td>
+                        <td class="stock-col"><span class="in-stock">Delivered</span></td>
+                        <td class="price-col">9/11/2020</td>
+                    </tr>
+                    <tr>
+                        <td class="product-col">
+                            <div class="product">
+                                <figure class="product-media">
+                                    <a href="#">
+                                        <img src="https://i.imgur.com/g7VCt6U.jpg" alt="Product image">
+                                    </a>
+                                </figure>
+
+                                <h3 class="product-title">
+                                    <a href="#">White Pearl Handbag</a>
+                                </h3><!-- End .product-title -->
+                            </div><!-- End .product -->
+                        </td>
+                        <td class="price-col">$95.00</td>
+                        <td class="stock-col"><span class="in-stock">Delivered</span></td>
+                        <td class="price-col">6/12/2019</td>
+                    </tr>
+                    <tr>
+                        <td class="product-col">
+                            <div class="product">
+                                <figure class="product-media">
+                                    <a href="#">
+                                        <img src="https://i.imgur.com/NtdGYou.jpg" alt="Product image">
+                                    </a>
+                                </figure>
+
+                                <h3 class="product-title">
+                                    <a href="#">Orange saddle lock front chain cross body bag</a>
+                                </h3><!-- End .product-title -->
+                            </div><!-- End .product -->
+                        </td>
+                        <td class="price-col">$52.00</td>
+                        <td class="stock-col"><span class="out-of-stock">Cancelled</span></td>
+                        <td class="action-col">
+                            <button class="btn btn-block btn-outline-primary-2 disabled">Cancelled</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table><!-- End .table table-wishlist -->
+            </div><!-- End .container -->
+        </div><!-- End .page-content -->
+    </main><!-- End .main -->
+
+    <footer class="footer">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="widget widget-about">
+                            <img src="https://i.imgur.com/ItlCRTo.png" class="footer-logo" alt="Footer Logo" width="105"
+                                 height="25">
+                            <p>You don't have to be too fussy to stand out, just choose what makes you comfortable and really useful, you will have more time to experience life the way you want.
+                            </p>
+
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" target="_blank" title="Facebook"><i
+                                        class="icon-facebook-f"></i></a>
+                                <a href="#" class="social-icon" target="_blank" title="Twitter"><i
+                                        class="icon-twitter"></i></a>
+                                <a href="#" class="social-icon" target="_blank" title="Instagram"><i
+                                        class="icon-instagram"></i></a>
+                                <a href="#" class="social-icon" target="_blank" title="Youtube"><i
+                                        class="icon-youtube"></i></a>
+                                <a href="#" class="social-icon" target="_blank" title="Pinterest"><i
+                                        class="icon-pinterest"></i></a>
+                            </div><!-- End .soial-icons -->
+                        </div><!-- End .widget about-widget -->
+                    </div><!-- End .col-sm-6 col-lg-3 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget-title">Useful Links</h4><!-- End .widget-title -->
+
+                            <ul class="widget-list">
+                                <li><a href="about.html">About Potamato</a></li>
+                                <li><a href="#">How to shop on Potamato</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="login.html">Log in</a></li>
+                            </ul><!-- End .widget-list -->
+                        </div><!-- End .widget -->
+                    </div><!-- End .col-sm-6 col-lg-3 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget-title">Customer Service</h4><!-- End .widget-title -->
+
+                            <ul class="widget-list">
+                                <li><a href="#">Payment Methods</a></li>
+                                <li><a href="#">Money-back guarantee!</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul><!-- End .widget-list -->
+                        </div><!-- End .widget -->
+                    </div><!-- End .col-sm-6 col-lg-3 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget-title">My Account</h4><!-- End .widget-title -->
+
+                            <ul class="widget-list">
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="cart.html">View Cart</a></li>
+                                <li><a href="#">My Wishlist</a></li>
+                                <li><a href="#">Track My Order</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul><!-- End .widget-list -->
+                        </div><!-- End .widget -->
+                    </div><!-- End .col-sm-6 col-lg-3 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+        </div><!-- End .footer-middle -->
+
+        <div class="footer-bottom">
+            <div class="container">
+                <figure class="footer-payments">
+                    <img src="https://i.imgur.com/W6wtbK9.png" alt="Payment methods" width="272" height="20">
+                </figure><!-- End .footer-payments -->
+            </div><!-- End .container -->
+        </div><!-- End .footer-bottom -->
+    </footer><!-- End .footer -->
+</div><!-- End .page-wrapper -->
+<button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+<div class="mobile-menu-container">
+    <div class="mobile-menu-wrapper">
+        <span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+        <form action="#" method="get" class="mobile-search">
+            <label for="mobile-search" class="sr-only">Search</label>
+            <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..."
+                   required>
+            <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+        </form>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+            <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+            <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+        </div><!-- End .social-icons -->
+    </div><!-- End .mobile-menu-wrapper -->
+</div><!-- End .mobile-menu-container -->
+
+<!-- Plugins JS File -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.hoverIntent.min.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/superfish.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
