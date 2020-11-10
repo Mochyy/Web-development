@@ -17931,10 +17931,6 @@ button:focus {
     content: '\f2cc'
 }
 
-.icon-random:before {
-    content: '\f2d0'
-}
-
 .icon-bandcamp:before {
     content: '\f2d5'
 }
