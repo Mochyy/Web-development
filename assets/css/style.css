@@ -17015,6 +17015,9 @@ button:focus {
 .icon-rmb:before {
     content: '\e808'
 }
+.icon-random:before {
+    content:'\e801'
+}
 
 .icon-creative-commons-1:before {
     content: '\e809'
