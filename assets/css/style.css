@@ -17015,9 +17015,6 @@ button:focus {
 .icon-rmb:before {
     content: '\e808'
 }
-.icon-random:before {
-    content:'\f150'
-}
 
 .icon-creative-commons-1:before {
     content: '\e809'
@@ -17929,6 +17926,10 @@ button:focus {
 
 .icon-question-circle:before {
     content: '\f2cc'
+}
+
+.icon-random:before {
+    content: '\f2d0'
 }
 
 .icon-bandcamp:before {
