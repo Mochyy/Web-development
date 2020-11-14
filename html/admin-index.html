@@ -20,6 +20,11 @@
     <link href="admin-css/style.css" rel="stylesheet">
     <link href="admin-css/style-responsive.css" rel="stylesheet">
     <script src="admin-lib/chart-master/Chart.js"></script>
+
+    <link rel="stylesheet" href="admin-lib/xchart/xcharts.css">
+    <!-- Custom styles for this template -->
+    <link href="admin-css/style.css" rel="stylesheet">
+    <link href="admin-css/style-responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -207,7 +212,7 @@
                         <li>
                             <a href="admin-index.html#">
                                 <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                                Dung lượng đĩa đạt 85%.
+                                Dung lượng bộ nhớ đạt 85%.
                                 <span class="small italic">2 giờ.</span>
                             </a>
                         </li>
@@ -229,7 +234,7 @@
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Logout</a></li>
+                <li><a class="logout" href="admin-login.html">Đăng xuất</a></li>
             </ul>
         </div>
     </header>
@@ -246,7 +251,7 @@
                                                                 width="80"></a></p>
                 <h5 class="centered">Thiên Ân</h5>
                 <li class="mt">
-                    <a class="active" href="admin-index.html">
+                    <a admin-index.html href="admin-index.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Quản trị</span>
                     </a>
@@ -309,70 +314,23 @@
             <div class="row">
                 <div class="col-lg-9 main-chart">
                     <!--CUSTOM CHART START -->
-                    <div class="border-head">
-                        <h3>USER VISITS</h3>
-                    </div>
-                    <div class="custom-bar-chart">
-                        <ul class="y-axis">
-                            <li><span>10.000</span></li>
-                            <li><span>8.000</span></li>
-                            <li><span>6.000</span></li>
-                            <li><span>4.000</span></li>
-                            <li><span>2.000</span></li>
-                            <li><span>0</span></li>
-                        </ul>
-                        <div class="bar">
-                            <div class="title">JAN</div>
-                            <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip"
-                                 data-placement="top">85%
-                            </div>
-                        </div>
-                        <div class="bar ">
-                            <div class="title">FEB</div>
-                            <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip"
-                                 data-placement="top">50%
-                            </div>
-                        </div>
-                        <div class="bar ">
-                            <div class="title">MAR</div>
-                            <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip"
-                                 data-placement="top">60%
-                            </div>
-                        </div>
-                        <div class="bar ">
-                            <div class="title">APR</div>
-                            <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip"
-                                 data-placement="top">45%
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="title">MAY</div>
-                            <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip"
-                                 data-placement="top">32%
-                            </div>
-                        </div>
-                        <div class="bar ">
-                            <div class="title">JUN</div>
-                            <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip"
-                                 data-placement="top">62%
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="title">JUL</div>
-                            <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip"
-                                 data-placement="top">75%
-                            </div>
+
+                    <div class="content-panel">
+                        <h4><i class="fa fa-angle-right"></i> Lượt truy cập</h4>
+                        <div class="panel-body">
+                            <figure class="demo-xchart" id="chart"></figure>
                         </div>
                     </div>
-                    <!--custom chart end-->
+
                     <div class="row mt">
                         <!-- SERVER STATUS PANELS -->
                         <div class="col-md-4 col-sm-4 mb">
-                            <div class="grey-panel pn donut-chart">
+                            <div class="grey-panel pn donut-chart"
+                                 style="width: 400px; height: 400px; display: inline-block;margin-right: 100px">
                                 <div class="grey-header">
-                                    <h5>SERVER LOAD</h5>
+                                    <h5>SERVER</h5>
                                 </div>
-                                <canvas id="serverstatus01" height="120" width="120"></canvas>
+                                <canvas id="serverstatus01" height="220" width="220"></canvas>
                                 <script>
                                     var doughnutData = [{
                                         value: 70,
@@ -387,7 +345,7 @@
                                 </script>
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6 goleft">
-                                        <p>Usage<br/>Increase:</p>
+                                        <p>Sử dụng<br/>Gia tăng:</p>
                                     </div>
                                     <div class="col-sm-6 col-xs-6">
                                         <h2>21%</h2>
@@ -397,51 +355,22 @@
                             <!-- /grey-panel -->
                         </div>
                         <!-- /col-md-4-->
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="darkblue-panel pn">
-                                <div class="darkblue-header">
-                                    <h5>DROPBOX STATICS</h5>
-                                </div>
-                                <canvas id="serverstatus02" height="120" width="120"></canvas>
-                                <script>
-                                    var doughnutData = [{
-                                        value: 60,
-                                        color: "#1c9ca7"
-                                    },
-                                        {
-                                            value: 40,
-                                            color: "#f68275"
-                                        }
-                                    ];
-                                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
-                                </script>
-                                <p>April 17, 2014</p>
-                                <footer>
-                                    <div class="pull-left">
-                                        <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-                                    </div>
-                                    <div class="pull-right">
-                                        <h5>60% Used</h5>
-                                    </div>
-                                </footer>
-                            </div>
-                            <!--  /darkblue panel -->
-                        </div>
+
                         <!-- /col-md-4 -->
                         <div class="col-md-4 col-sm-4 mb">
                             <!-- REVENUE PANEL -->
-                            <div class="green-panel pn">
+                            <div class="green-panel pn" style="width: 400px; height: 400px; margin-left: 225px">
                                 <div class="green-header">
-                                    <h5>REVENUE</h5>
+                                    <h5>LỢI NHUẬN</h5>
                                 </div>
                                 <div class="chart mt">
-                                    <div class="sparkline" data-type="line" data-resize="true" data-height="75"
+                                    <div class="sparkline" data-type="line" data-resize="true" data-height="200"
                                          data-width="90%" data-line-width="1" data-line-color="#fff"
                                          data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff"
                                          data-spot-radius="4"
                                          data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
                                 </div>
-                                <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
+                                <p class="mt"><b>$ 17,980</b><br/>Thu nhập</p>
                             </div>
                         </div>
                         <!-- /col-md-4 -->
@@ -450,97 +379,68 @@
                     <div class="row">
                         <!-- TWITTER PANEL -->
                         <div class="col-md-4 mb">
-                            <div class="twitter-panel pn">
-                                <i class="fa fa-twitter fa-4x"></i>
-                                <p>Mochyy is here! Take a look and enjoy.</p>
+                            <div class="twitter-panel pn"
+                                 style="width: 400px; height: 400px; display: inline-block;margin-right: 100px">
+                                <i class="fa fa-twitter fa-5x"
+                                   style="width: 150px; height: 150px; padding-top: 100px"></i>
+                                <p>Mochyy dây! Ghé thăm nhé.</p>
                                 <p class="user">@_mochyy</p>
                             </div>
                         </div>
                         <!-- /col-md-4 -->
                         <div class="col-md-4 mb">
                             <!-- WHITE PANEL - TOP USER -->
-                            <div class="white-panel pn">
+                            <div class="white-panel pn" style="width: 400px; height: 400px; margin-left: 225px">
                                 <div class="white-header">
-                                    <h5>TOP USER</h5>
+                                    <h5>NGƯỜI DÙNG TÍCH CỰC</h5>
                                 </div>
-                                <p><img src="img/ui-zac.jpg" class="img-circle" width="50"></p>
-                                <p><b>Zac Snider</b></p>
+                                <p><img src="https://i.pinimg.com/564x/50/4a/ad/504aad7706223a9306db222c41690d35.jpg"
+                                        class="img-circle" width="200"></p>
+                                <p><b>Meo Meo</b></p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p class="small mt">MEMBER SINCE</p>
+                                        <p class="small mt">THÀNH VIÊN TỪ</p>
                                         <p>2012</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <p class="small mt">TOTAL SPEND</p>
-                                        <p>$ 47,60</p>
+                                        <p class="small mt">ĐÃ CHI</p>
+                                        <p>$ 99947,60</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /col-md-4 -->
-                        <div class="col-md-4 mb">
-                            <!-- INSTAGRAM PANEL -->
-                            <div class="instagram-panel pn">
-                                <i class="fa fa-instagram fa-4x"></i>
-                                <p>@THISISYOU<br/> 5 min. ago
-                                </p>
-                                <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-                            </div>
-                        </div>
-                        <!-- /col-md-4 -->
                     </div>
                     <!-- /row -->
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                            <div class="product-panel-2 pn">
+                        <div class="col-lg-4 col-md-4 col-sm-4 mb" >
+                            <div class="product-panel-2 pn"  style="width: 400px; height: 400px; display: inline-block;margin-right: 100px; background-color: white" >
                                 <div class="badge badge-hot">HOT</div>
-                                <img src="img/product.jpg" width="200" alt="">
-                                <h5 class="mt">Flat Pack Heritage</h5>
-                                <h6>TOTAL SALES: 1388</h6>
-                                <button class="btn btn-small btn-theme04">FULL REPORT</button>
+                                <img src="https://i.imgur.com/oy6IXwL.png" width="250" alt="">
+                                <h5 class="mt">	YVES SALOMON - Pink Fur Pom Pom</h5>
+                                <h6>ĐÃ BÁN: 1388</h6>
+                                <button class="btn btn-small btn-theme04">BÁO CÁO</button>
                             </div>
                         </div>
                         <!-- /col-md-4 -->
                         <!--  PROFILE 02 PANEL -->
                         <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                            <div class="content-panel pn">
+                            <div class="content-panel pn" style="width: 400px; height: 400px; margin-left: 225px">
                                 <div id="profile-02">
                                     <div class="user">
-                                        <img src="https://i.imgur.com/RXsWLgP.png" class="img-circle" width="80">
-                                        <h4>Diem My</h4>
+                                        <img src="https://i.imgur.com/RXsWLgP.png" class="img-circle" width="200">
+                                        <h4  style="color: #0b2e13">Diem My</h4>
+
+                                        <div class="pr2-social centered">
+                                            <a href="#"><i class="fa fa-twitter"  style="color: #0b2e13"></i></a>
+                                            <a href="#"><i class="fa fa-facebook"  style="color: #0b2e13"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"  style="color: #0b2e13"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="pr2-social centered">
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                </div>
+
                             </div>
                             <!-- /panel -->
                         </div>
-                        <!--/ col-md-4 -->
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="green-panel pn">
-                                <div class="green-header">
-                                    <h5>DISK SPACE</h5>
-                                </div>
-                                <canvas id="serverstatus03" height="120" width="120"></canvas>
-                                <script>
-                                    var doughnutData = [{
-                                        value: 60,
-                                        color: "#2b2b2b"
-                                    },
-                                        {
-                                            value: 40,
-                                            color: "#fffffd"
-                                        }
-                                    ];
-                                    var myDoughnut = new Chart(document.getElementById("serverstatus03").getContext("2d")).Doughnut(doughnutData);
-                                </script>
-                                <h3>60% USED</h3>
-                            </div>
-                        </div>
-                        <!-- /col-md-4 -->
                     </div>
                     <!-- /row -->
                 </div>
@@ -551,7 +451,7 @@
                 <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
                     <div class="donut-main">
-                        <h4>COMPLETED ACTIONS & PROGRESS</h4>
+                        <h4>NHẬT KÝ HOẠT ĐỘNG</h4>
                         <canvas id="newchart" height="130" width="130"></canvas>
                         <script>
                             var doughnutData = [{
@@ -571,7 +471,7 @@
                         <div class="panel-body">
                             <div class="chart">
                                 <div class="centered">
-                                    <span>TODAY EARNINGS</span>
+                                    <span>THU NHẬP HÔM NAY</span>
                                     <strong>$ 890,00 | 15%</strong>
                                 </div>
                                 <br>
@@ -584,7 +484,7 @@
                     </div>
                     <!--new earning end-->
                     <!-- RECENT ACTIVITIES SECTION -->
-                    <h4 class="centered mt">RECENT ACTIVITY</h4>
+                    <h4 class="centered mt">HOẠT ĐỘNG GẦN ĐÂY</h4>
                     <!-- First Activity -->
                     <div class="desc">
                         <div class="thumb">
@@ -594,7 +494,7 @@
                             <p>
                                 <muted>Just Now</muted>
                                 <br/>
-                                <a href="#">Paul Rudd</a> purchased an item.<br/>
+                                <a href="#">Paul Rudd</a> đã mua một sản phẩn.<br/>
                             </p>
                         </div>
                     </div>
@@ -605,9 +505,9 @@
                         </div>
                         <div class="details">
                             <p>
-                                <muted>2 Minutes Ago</muted>
+                                <muted>2 phút trước</muted>
                                 <br/>
-                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                                <a href="#">James Brown</a> đã đăng ký nhận thông báo.<br/>
                             </p>
                         </div>
                     </div>
@@ -618,9 +518,9 @@
                         </div>
                         <div class="details">
                             <p>
-                                <muted>3 Hours Ago</muted>
+                                <muted>3 tiếng trước.</muted>
                                 <br/>
-                                <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+                                <a href="#">Diana Kennedy</a> vừa mua thẻ thành viên năm.<br/>
                             </p>
                         </div>
                     </div>
@@ -633,57 +533,57 @@
                             <p>
                                 <muted>7 Hours Ago</muted>
                                 <br/>
-                                <a href="#">Brando Page</a> purchased a year subscription.<br/>
+                                <a href="#">Brando Page</a> vừa mua thẻ thành viên năm.<br/>
                             </p>
                         </div>
                     </div>
                     <!-- USERS ONLINE SECTION -->
-                    <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
+                    <h4 class="centered mt">THÀNH VIÊN TRỰC TUYẾN</h4>
                     <!-- First Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="https://i.pinimg.com/originals/91/42/ec/9142ec2b4ae185d515c6873643fe56c7.jpg" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
                             <p>
                                 <a href="#">DIVYA MANIAN</a><br/>
-                                <muted>Available</muted>
+                                <muted>Đang hoạt động</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Second Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="https://pbs.twimg.com/media/ECA-3BcU0AA0Y0-?format=jpg&name=900x900" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
                             <p>
                                 <a href="#">DJ SHERMAN</a><br/>
-                                <muted>I am Busy</muted>
+                                <muted>Bận</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Third Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="https://i.pinimg.com/564x/47/72/57/477257967192f3c7f94c8f3131a68fc9.jpg" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
                             <p>
                                 <a href="#">DAN ROGERS</a><br/>
-                                <muted>Available</muted>
+                                <muted>Đang hoạt động</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Fourth Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="https://i.pinimg.com/564x/8b/3a/b2/8b3ab28a141f0c8e8b58fcb3ae0d5d63.jpg" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
                             <p>
                                 <a href="#">Zac Sniders</a><br/>
-                                <muted>Available</muted>
+                                <muted>Đang hoạt động</muted>
                             </p>
                         </div>
                     </div>
@@ -781,12 +681,12 @@
             },
             legend: [{
                 type: "text",
-                label: "Special event",
+                label: "Sự kiện đặc biệt",
                 badge: "00"
             },
                 {
                     type: "block",
-                    label: "Regular event",
+                    label: "Sự kiện thường nhật",
                 }
             ]
         });
@@ -798,6 +698,216 @@
         var to = $("#" + id).data("to");
         console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
     }
+</script>
+
+<!--script for this page-->
+<script src="admin-lib/xchart/d3.v3.min.js"></script>
+<script src="admin-lib/xchart/xcharts.min.js"></script>
+<script>
+    (function () {
+        var data = [{
+            "xScale": "ordinal",
+            "comp": [],
+            "main": [{
+                "className": ".main.l1",
+                "data": [{
+                    "y": 15,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 11,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 10,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 1,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 6,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }, {
+                "className": ".main.l2",
+                "data": [{
+                    "y": 29,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 33,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 13,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 16,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 7,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 18,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }],
+            "type": "line-dotted",
+            "yScale": "linear"
+        }, {
+            "xScale": "ordinal",
+            "comp": [],
+            "main": [{
+                "className": ".main.l1",
+                "data": [{
+                    "y": 12,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 18,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 7,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 6,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 12,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }, {
+                "className": ".main.l2",
+                "data": [{
+                    "y": 29,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 33,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 13,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 16,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 7,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 18,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }],
+            "type": "cumulative",
+            "yScale": "linear"
+        }, {
+            "xScale": "ordinal",
+            "comp": [],
+            "main": [{
+                "className": ".main.l1",
+                "data": [{
+                    "y": 12,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 18,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 7,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 6,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 12,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }, {
+                "className": ".main.l2",
+                "data": [{
+                    "y": 29,
+                    "x": "2012-11-19T00:00:00"
+                }, {
+                    "y": 33,
+                    "x": "2012-11-20T00:00:00"
+                }, {
+                    "y": 13,
+                    "x": "2012-11-21T00:00:00"
+                }, {
+                    "y": 16,
+                    "x": "2012-11-22T00:00:00"
+                }, {
+                    "y": 7,
+                    "x": "2012-11-23T00:00:00"
+                }, {
+                    "y": 18,
+                    "x": "2012-11-24T00:00:00"
+                }, {
+                    "y": 8,
+                    "x": "2012-11-25T00:00:00"
+                }]
+            }],
+            "type": "bar",
+            "yScale": "linear"
+        }];
+        var order = [0, 1, 0, 2],
+            i = 0,
+            xFormat = d3.time.format('%A'),
+            chart = new xChart('line-dotted', data[order[i]], '#chart', {
+                axisPaddingTop: 5,
+                dataFormatX: function (x) {
+                    return new Date(x);
+                },
+                tickFormatX: function (x) {
+                    return xFormat(x);
+                },
+                timing: 1250
+            }),
+            rotateTimer,
+            toggles = d3.selectAll('.multi button'),
+            t = 3500;
+
+        function updateChart(i) {
+            var d = data[i];
+            chart.setData(d);
+            toggles.classed('toggled', function () {
+                return (d3.select(this).attr('data-type') === d.type);
+            });
+            return d;
+        }
+
+        toggles.on('click', function (d, i) {
+            clearTimeout(rotateTimer);
+            updateChart(i);
+        });
+
+        function rotateChart() {
+            i += 1;
+            i = (i >= order.length) ? 0 : i;
+            var d = updateChart(order[i]);
+            rotateTimer = setTimeout(rotateChart, t);
+        }
+
+        rotateTimer = setTimeout(rotateChart, t);
+    }());
 </script>
 </body>
 
