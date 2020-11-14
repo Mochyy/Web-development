@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>POTAMATO - PROFILE</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="admin-lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="admin-lib/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="admin-css/style.css" rel="stylesheet">
+    <link href="admin-css/style-responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+<section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>POTA<span>MATO</span></b></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-theme">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green">Bạn có 4 nhiệm vụ đang chờ xử lý</p>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Bảng quản trị POTAMATO</div>
+                                    <div class="percent">40%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40% Hoàn thành (thành công)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Cập nhật cơ sở dữ liệu</div>
+                                    <div class="percent">60%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Hoàn thành (cảnh báo)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Phát triển sản phẩm</div>
+                                    <div class="percent">80%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Hoành thành</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Thanh toán đã gửi</div>
+                                    <div class="percent">70%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                        <span class="sr-only">70% Hoàn thành (quang trọng)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="external">
+                            <a href="#">Xem tất cả công việc</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-theme">5</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green">BẠn có 5 tin nhắn mới</p>
+                        </li>
+                        <li>
+                            <a href="lobby.html">
+                                <span class="photo"><img alt="avatar"
+                                                         src="https://i.pinimg.com/564x/66/d9/36/66d93692e10e095e2195e1199f9c15d1.jpg"></span>
+                                <span class="subject">
+                  <span class="from">Meo Meo</span>
+                  <span class="time">Bây giờ</span>
+                  </span>
+                                <span class="message">
+                  Nhập kho được 30%.
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lobby.html">
+                                <span class="photo"><img alt="avatar" src="https://i.imgur.com/RXsWLgP.png"></span>
+                                <span class="subject">
+                  <span class="from">Diễm My</span>
+                  <span class="time">40 giây.</span>
+                  </span>
+                                <span class="message">
+                  My kiểm định xong sản phẩm rồi.
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lobby.html">
+                                <span class="photo"><img alt="avatar"
+                                                         src="https://i.pinimg.com/564x/42/b3/4b/42b34b3e9d6eb7e313f86c6342e5593c.jpg"></span>
+                                <span class="subject">
+                  <span class="from">Phú Hải</span>
+                  <span class="time">2 phút.</span>
+                  </span>
+                                <span class="message">
+                  Bảo trì hệ thống trong 30p nữa.
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lobby.html">
+                                <span class="photo"><img alt="avatar"
+                                                         src="https://i.pinimg.com/564x/4c/6c/37/4c6c37b3538069be05bc3e6796048c8e.jpg"></span>
+                                <span class="subject">
+                  <span class="from">Hà Ninh</span>
+                  <span class="time">30 phút.</span>
+                  </span>
+                                <span class="message">
+                  Khách đang đợi trả lời mail.
+                  </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">Xem tất cả tin nhắn</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- inbox dropdown end -->
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-warning">7</span>
+                    </a>
+                    <ul class="dropdown-menu extended notification">
+                        <div class="notify-arrow notify-arrow-yellow"></div>
+                        <li>
+                            <p class="yellow">Bạn có 7 thông báo mới</p>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                Máy chủ quá tải.
+                                <span class="small italic">4 phút.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                                Bộ nhớ # 2 Không phản hồi.
+                                <span class="small italic">50 phút.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                Dung lượng đĩa đạt 85%.
+                                <span class="small italic">2 giờ.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <span class="label label-success"><i class="fa fa-plus"></i></span>
+                                Người dùng mới đã đăng ký.
+                                <span class="small italic">3 giờ.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">Xem tất cả thông báo</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- notification dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <p class="centered"><a href="profile.html"><img src="https://i.imgur.com/oE1QFEm.png" class="img-circle"
+                                                                width="80"></a></p>
+                <h5 class="centered">Thiên Ân</h5>
+                <li class="mt">
+                    <a class="active" href="index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Quản trị</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-users"></i>
+                        <span>Quản lý thành viên</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="Thành%20viên%20quản%20trị.html">Thành viên quản trị</a></li>
+                        <li><a href="Khách%20hàng.html">Khách hàng</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-barcode"></i>
+                        <span>Quản lý sản phẩm</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="Danh%20sách%20sản%20phẩm.html">Danh sách sản phẩm</a></li>
+                        <li><a href="Trạng%20thái.html">Trạng thái</a></li>
+                        <li><a href="Nhập%20kho.html">Nhập kho</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="inbox.html">
+                        <i class="fa fa-envelope"></i>
+                        <span>Mail </span>
+                        <span class="label label-theme pull-right mail-info">2</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-comments-o"></i>
+                        <span>Chat</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="lobby.html">Tin nhắn chờ</a></li>
+                        <li><a href="chat_room.html">Phòng chat</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="google_maps.html">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Google Maps </span>
+                    </a>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <div class="row content-panel">
+                        <div class="col-md-4 profile-text mt mb centered">
+                            <div class="right-divider hidden-sm hidden-xs">
+                                <h4>1110500</h4>
+                                <h6>NGƯỜI THEO DÕI</h6>
+                                <h4>290</h4>
+                                <h6>THEO DÕI</h6>
+                                <h4>$ 13,980</h4>
+                                <h6>tHU NHẬP HÀNG THÁNG</h6>
+                            </div>
+                        </div>
+                        <!-- /col-md-4 -->
+                        <div class="col-md-4 profile-text">
+                            <h3>Thiên Ân</h3>
+                            <h6>Quản trị viên chính</h6>
+                            <p>Xin chào.</p>
+                            <br>
+                            <p>
+                                <button class="btn btn-theme"><i class="fa fa-envelope"></i> Gửi tin nhắn</button>
+                            </p>
+                        </div>
+                        <!-- /col-md-4 -->
+                        <div class="col-md-4 centered">
+                            <div class="profile-pic">
+                                <p><img src="https://i.imgur.com/oE1QFEm.png" class="img-circle"></p>
+                                <p>
+                                    <button class="btn btn-theme"><i class="fa fa-check"></i> Theo dõi</button>
+                                    <button class="btn btn-theme02">Thêm bạn bè</button>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /col-md-4 -->
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /col-lg-12 -->
+                <div class="col-lg-12 mt">
+                    <div class="row content-panel">
+                        <div class="panel-heading">
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#overview">Tổng quan</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#contact" class="contact-map">Liên hệ</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#edit">Chỉnh sửa thông tin cá nhân</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /panel-heading -->
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div id="overview" class="tab-pane active">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <textarea rows="3" class="form-control"
+                                                      placeholder="Bạn đang nghĩ gì?"></textarea>
+                                            <div class="grey-style">
+                                                <div class="pull-left">
+                                                    <button class="btn btn-sm btn-theme"><i class="fa fa-camera"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-theme"><i
+                                                            class="fa fa-map-marker"></i></button>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-sm btn-theme03">Đăng</button>
+                                                </div>
+                                            </div>
+                                            <div class="detailed mt">
+                                                <h4>Hoạt động gần đây</h4>
+                                                <div class="recent-activity">
+                                                    <div class="activity-icon bg-theme"><i class="fa fa-check"></i>
+                                                    </div>
+                                                    <div class="activity-panel">
+                                                        <h5>1 GIỜ</h5>
+                                                        <p>Bảo trì hệ thống</p>
+                                                    </div>
+                                                    <div class="activity-icon bg-theme02"><i class="fa fa-trophy"></i>
+                                                    </div>
+                                                    <div class="activity-panel">
+                                                        <h5>5 GIỜ</h5>
+                                                        <p>Nhiệm vụ hoàn thành. Đã giải quyết vấn đề với Dung lượng
+                                                            đĩa.</p>
+                                                    </div>
+                                                    <div class="activity-icon bg-theme04"><i class="fa fa-rocket"></i>
+                                                    </div>
+                                                    <div class="activity-panel">
+                                                        <h5>3 NGÀY</h5>
+                                                        <p>Ra mắt sản phẩm mới: Flat Pack Heritage.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- /recent-activity -->
+                                            </div>
+                                            <!-- /detailed -->
+                                        </div>
+                                        <!-- /col-md-6 -->
+                                        <div class="col-md-6 detailed">
+                                            <h4>Thống kê Người dùng</h4>
+                                            <div class="row centered mt mb">
+                                                <div class="col-sm-4">
+                                                    <h1><i class="fa fa-money"></i></h1>
+                                                    <h3>$22,980</h3>
+                                                    <h6>THU NHẬP</h6>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h1><i class="fa fa-trophy"></i></h1>
+                                                    <h3>37</h3>
+                                                    <h6>NHIỆM VỤ HOÀN THÀNH</h6>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <h1><i class="fa fa-shopping-cart"></i></h1>
+                                                    <h3>1980</h3>
+                                                    <h6>ĐÃ BÁN</h6>
+                                                </div>
+                                            </div>
+                                            <!-- /row -->
+                                            <h4>Bạn bè</h4>
+                                            <div class="row centered mb">
+                                                <ul class="my-friends">
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/a1/d3/03/a1d30396869c538868d38e202e0a2e56.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/4f/f0/72/4ff072907d090e8f0ac12f4f302c73b7.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/78/2a/de/782ade681a2b01a29f56608ec77ed2d3.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/236x/ca/43/4b/ca434b329dbf2202119b2a20b93b6239.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/9b/9f/ff/9b9fff6f165695da92a8b1e159b6e640.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/74/8c/07/748c070028a340fb3f500e708e174356.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/9c/04/2d/9c042dcd6c5d0c34c5751657119fdf4d.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/36/73/f1/3673f1285e7f3806b2dfdf4102f947f5.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/236x/90/7c/6a/907c6ab8a0572c630c09b81dffde44ef.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/76/b4/85/76b4852311918dd404cefc9592fa9b7a.jpg">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="friends-pic"><img class="img-circle" width="35"
+                                                                                      height="35"
+                                                                                      src="https://i.pinimg.com/564x/c3/cc/7a/c3cc7a2449b307d4638a1889480f316a.jpg">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="row mt">
+                                                    <div class="col-md-4 col-md-offset-4">
+                                                        <h6><a href="#">XEM TẤT CẢ</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /row -->
+                                            <h4>Công việc đang làm</h4>
+                                            <div class="row centered">
+                                                <div class="col-md-8 col-md-offset-2">
+                                                    <h5>Cập nhật bảng quản lý (40%)</h5>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-info" role="progressbar"
+                                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                                             style="width: 40%">
+                                                            <span class="sr-only">40% Hoàn thành (thành công)</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5>Tin nhắn chưa đọc (80%)</h5>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-info" role="progressbar"
+                                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                                             style="width: 80%">
+                                                            <span class="sr-only">80% Hoàn thành (thành công)</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5>Đánh giá sản phẩm (60%)</h5>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-info" role="progressbar"
+                                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                                             style="width: 60%">
+                                                            <span class="sr-only">60% Hoàn thành (thành công)</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5>Lời mời kết bạn (90%)</h5>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-info" role="progressbar"
+                                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                                             style="width: 90%">
+                                                            <span class="sr-only">90% Hoàn thành (thành công)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /col-md-8 -->
+                                            </div>
+                                            <!-- /row -->
+                                        </div>
+                                        <!-- /col-md-6 -->
+                                    </div>
+                                    <!-- /OVERVIEW -->
+                                </div>
+                                <!-- /tab-pane -->
+                                <div id="contact" class="tab-pane">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div id="map"></div>
+                                        </div>
+                                        <!-- /col-md-6 -->
+                                        <div class="col-md-6 detailed">
+                                            <h4>Vị trí</h4>
+                                            <div class="col-md-8 col-md-offset-2 mt">
+                                                <p>
+                                                    Bưu cục<br/> Linh Trung<br/> Thủ đức, TP Hồ Chí Minh
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    Trụ sở<br/> 115 Thủ Thiêm,<br/> Quận 2, TP Hồ Chí Minh.
+                                                </p>
+                                            </div>
+                                            <h4>Liên hệ</h4>
+                                            <div class="col-md-8 col-md-offset-2 mt">
+                                                <p>
+                                                    Điện thoại bàn: +33 4898-4303<br/> Di động: 48 4389-4393<br/>
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    Email: thienan@potamato.com.vn <br/> Skype: thienanpotamato<br/> Website:
+                                                    http://thienan.potamato.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- /col-md-6 -->
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                                <!-- /tab-pane -->
+                                <div id="edit" class="tab-pane">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-lg-offset-2 detailed">
+                                            <h4 class="mb">Thông tin cá nhân</h4>
+                                            <form role="form" class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label"> Ảnh đại diện</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="file" id="exampleInputFile" class="file-pos">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Cơ quan</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="c-name"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Nơi ở</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="lives-in"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Quốc gia</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="country"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Mô tả</label>
+                                                    <div class="col-lg-10">
+                                                        <textarea rows="10" cols="30" class="form-control" id=""
+                                                                  name=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-8 col-lg-offset-2 detailed mt">
+                                            <h4 class="mb">Thông tin liên hệ</h4>
+                                            <form role="form" class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Địa chỉ 1</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="addr1"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Địa chỉ 2</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="addr2"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">SĐT</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="phone"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Di động</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="cell"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Email</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="email"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-lg-2 control-label">Skype</label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" placeholder=" " id="skype"
+                                                               class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-lg-offset-2 col-lg-10">
+                                                        <button class="btn btn-theme" type="submit">Lưu</button>
+                                                        <button class="btn btn-theme04" type="button">Hủy</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- /col-lg-8 -->
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                                <!-- /tab-pane -->
+                            </div>
+                            <!-- /tab-content -->
+                        </div>
+                        <!-- /panel-body -->
+                    </div>
+                    <!-- /col-lg-12 -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- /wrapper -->
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>
+                <strong>POTAMATO - Nâng niu từng sản phẩm.</strong>
+            </p>
+            <a href="index.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="admin-lib/jquery/jquery.min.js"></script>
+<script src="admin-lib/bootstrap/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="admin-lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="admin-lib/jquery.scrollTo.min.js"></script>
+<script src="admin-lib/jquery.nicescroll.js" type="text/javascript"></script>
+<!--common script for all pages-->
+<script src="admin-lib/common-scripts.js"></script>
+<!--script for this page-->
+<!-- MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION -->
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script>
+    $('.contact-map').click(function () {
+
+        //google map in tab click initialize
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(40.6700, -73.9400);
+            var mapOptions = {
+                zoom: 11,
+                scrollwheel: false,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Dashio Admin Theme!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'click', initialize);
+    });
+</script>
+</body>
+
+</html>
