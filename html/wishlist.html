@@ -285,16 +285,16 @@
     <main class="main">
         <div class="page-header text-center" style="background-image: url('https://i.imgur.com/69I7DV8.jpg')">
             <div class="container">
-                <h1 class="page-title" style="font-weight: bold">Wishlist<span>Shop</span></h1>
+                <h1 class="page-title" style="font-weight: bold">Yêu thích<span></span></h1>
             </div><!-- End .container -->
         </div><!-- End .page-header -->
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
             <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../../../../../Web-end/html/index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
-                </ol>
+<!--                <ol class="breadcrumb">-->
+<!--                    <li class="breadcrumb-item"><a href="../../../../../Web-end/html/index.html">Home</a></li>-->
+<!--                    <li class="breadcrumb-item"><a href="#">Shop</a></li>-->
+<!--                    <li class="breadcrumb-item active" aria-current="page">Wishlist</li>-->
+<!--                </ol>-->
             </div><!-- End .container -->
         </nav><!-- End .breadcrumb-nav -->
 
@@ -303,9 +303,9 @@
                 <table class="table table-wishlist table-mobile">
                     <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Stock Status</th>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Trạng thái</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -327,20 +327,13 @@
                             </div><!-- End .product -->
                         </td>
                         <td class="price-col">$84.00</td>
-                        <td class="stock-col"><span class="in-stock">In stock</span></td>
+                        <td class="stock-col"><span class="in-stock">Còn hàng</span></td>
                         <td class="action-col">
-                            <div class="dropdown">
-                                <button class="btn btn-block btn-outline-primary-2" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                    <i class="icon-list-alt"></i>Select Options
-                                </button>
-
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">First option</a>
-                                    <a class="dropdown-item" href="#">Another option</a>
-                                    <a class="dropdown-item" href="#">The best option</a>
-                                </div>
-                            </div>
+                            <button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Thêm vào giỏ hàng
+                            </button>
+                        </td>
+                        <td class="remove-col">
+                            <button class="btn-remove"><i class="icon-close"></i></button>
                         </td>
                         <td class="remove-col">
                             <button class="btn-remove"><i class="icon-close"></i></button>
@@ -361,10 +354,9 @@
                             </div><!-- End .product -->
                         </td>
                         <td class="price-col">$76.00</td>
-                        <td class="stock-col"><span class="in-stock">In stock</span></td>
+                        <td class="stock-col"><span class="in-stock">Còn hàng</span></td>
                         <td class="action-col">
-                            <button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Add to
-                                Cart
+                            <button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Thêm vào giỏ hàng
                             </button>
                         </td>
                         <td class="remove-col">
@@ -386,9 +378,9 @@
                             </div><!-- End .product -->
                         </td>
                         <td class="price-col">$52.00</td>
-                        <td class="stock-col"><span class="out-of-stock">Out of stock</span></td>
+                        <td class="stock-col"><span class="out-of-stock">Hết hàng</span></td>
                         <td class="action-col">
-                            <button class="btn btn-block btn-outline-primary-2 disabled">Out of Stock</button>
+                            <button class="btn btn-block btn-outline-primary-2 disabled">Hết hàng</button>
                         </td>
                         <td class="remove-col">
                             <button class="btn-remove"><i class="icon-close"></i></button>
