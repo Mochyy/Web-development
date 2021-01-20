@@ -1,10 +1,14 @@
-<%--
+<%@ page import="entity.ProductEntity" %>
+<%@ page import="java.util.List" %>
+<%@ page import="beans.Product" %><%--
   Created by IntelliJ IDEA.
   User: PC
   Date: 1/9/2021
   Time: 4:15 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +36,10 @@
 </head>
 
 <body>
+<%
+    ProductEntity pe = new ProductEntity();
+    List<Product> list = pe.getAll();
+%>
 <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
@@ -321,7 +329,7 @@
                         <table id="example" class="display" width="100%" data-page-length="25"
                                data-order="[[ 1, &quot;asc&quot; ]]">
                             <h4>
-                                <a href="Nhập%20kho.html">
+                                <a href="${pageContext.request.contextPath}/addProduct">
                                     <button class="btn btn-success btn-xs"><i class="fa fa-plus-square"></i></button>
                                     Danh sách sản phẩm
                                     <br>
@@ -341,70 +349,80 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <%
+                                for (Product p : list) {
+                            %>
                             <tr>
                                 <td>
-                                    <p>SP01</p>
+                                    <p><%=p.getId()%>
+                                    </p>
                                 </td>
-                                <td class="hidden-phone"><img src="https://i.imgur.com/v2jTYTu.jpg"
+                                <td class="hidden-phone"><img src="<%=p.getImg()%>>"
                                                               alt="Product image"
                                                               class="product-image"
                                                               style="height: 80px; width: 80px">
                                 </td>
-                                <td class="hidden-phone">BAO BAO ISSEY MIYAKE -
-                                    Pink Daypack Backpack
+                                <td class="hidden-phone"><%=p.getName()%>
                                 </td>
                                 <td><span class="label label-success label-mini">Còn hàng</span></td>
-                                <td class="hidden-phone">$1999.00</td>
-                                <td><a href="dashboard.html">Backpack</a></td>
+                                <td class="hidden-phone"><%=p.getPrice()%>
+                                </td>
+                                <td><%=p.getIdCategory()%>
+                                </td>
                                 <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>
-                                    </button>
+                                    <form action="${pageContext.request.contextPath}/editProduct" method="get">
+                                        <input style="display: none" name="id" value="<%=p.getId()%>">
+                                        <button  type="submit" class="btn btn-primary btn-xs"><i
+                                                class="fa fa-pencil"></i>
+                                        </button>
+                                    </form>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>
                                     </button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <p>SP02</p>
-                                </td>
-                                <td class="hidden-phone"><img src="https://i.imgur.com/hhWoQrg.jpg"
-                                                              alt="Product image"
-                                                              class="product-image"
-                                                              style="height: 80px; width: 80px">
-                                </td>
-                                <td class="hidden-phone">FENDI -
-                                    Black & Yellow Bag Bugs Convertible Backpack
-                                </td>
-                                <td><span class="label label-default label-mini">Hết hàng</span></td>
-                                <td class="hidden-phone">$1262.00</td>
-                                <td><a href="dashboard.html">Backpack</a></td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>
-                                    </button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>SP03</p>
-                                </td>
-                                <td class="hidden-phone"><img src="https://i.imgur.com/PmiGq7e.jpg"
-                                                              alt="Product image"
-                                                              class="product-image"
-                                                              style="height: 80px; width: 80px">
-                                </td>
-                                <td class="hidden-phone">Lady gross blaze</td>
-                                <td><span class="label label-success label-mini">Còn hàng</span></td>
-                                <td class="hidden-phone">$959.00</td>
-                                <td><a href="dashboard.html">Handbag</a></td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>
-                                    </button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            <%}%>
+                            <%--                            <tr>--%>
+                            <%--                                <td>--%>
+                            <%--                                    <p>SP02</p>--%>
+                            <%--                                </td>--%>
+                            <%--                                <td class="hidden-phone"><img src="https://i.imgur.com/hhWoQrg.jpg"--%>
+                            <%--                                                              alt="Product image"--%>
+                            <%--                                                              class="product-image"--%>
+                            <%--                                                              style="height: 80px; width: 80px">--%>
+                            <%--                                </td>--%>
+                            <%--                                <td class="hidden-phone">FENDI ---%>
+                            <%--                                    Black & Yellow Bag Bugs Convertible Backpack--%>
+                            <%--                                </td>--%>
+                            <%--                                <td><span class="label label-default label-mini">Hết hàng</span></td>--%>
+                            <%--                                <td class="hidden-phone">$1262.00</td>--%>
+                            <%--                                <td><a href="dashboard.html">Backpack</a></td>--%>
+                            <%--                                <td>--%>
+                            <%--                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>--%>
+                            <%--                                    </button>--%>
+                            <%--                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>--%>
+                            <%--                                    </button>--%>
+                            <%--                                </td>--%>
+                            <%--                            </tr>--%>
+                            <%--                            <tr>--%>
+                            <%--                                <td>--%>
+                            <%--                                    <p>SP03</p>--%>
+                            <%--                                </td>--%>
+                            <%--                                <td class="hidden-phone"><img src="https://i.imgur.com/PmiGq7e.jpg"--%>
+                            <%--                                                              alt="Product image"--%>
+                            <%--                                                              class="product-image"--%>
+                            <%--                                                              style="height: 80px; width: 80px">--%>
+                            <%--                                </td>--%>
+                            <%--                                <td class="hidden-phone">Lady gross blaze</td>--%>
+                            <%--                                <td><span class="label label-success label-mini">Còn hàng</span></td>--%>
+                            <%--                                <td class="hidden-phone">$959.00</td>--%>
+                            <%--                                <td><a href="dashboard.html">Handbag</a></td>--%>
+                            <%--                                <td>--%>
+                            <%--                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i>--%>
+                            <%--                                    </button>--%>
+                            <%--                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>--%>
+                            <%--                                    </button>--%>
+                            <%--                                </td>--%>
+                            <%--                            </tr>--%>
                             </tbody>
                         </table>
                     </div>
@@ -447,7 +465,7 @@
 <script type="text/javascript" src="admin-lib/gritter/js/jquery.gritter.js"></script>
 <script type="text/javascript" src="admin-lib/gritter-conf.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="san%20pham.js"></script>
+<script type="text/javascript" src="san_pham.js"></script>
 </body>
 
 </html>
